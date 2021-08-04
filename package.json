@@ -1,0 +1,27 @@
+{
+  "name": "2021-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "minify-css": "css/style.css"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-css": "minify css/style.css > css/style.min.css",
+    "watch": "npm-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephodom/2021-website.git"
+  },
+  "author": "Joseph Odom",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/josephodom/2021-website/issues"
+  },
+  "homepage": "https://github.com/josephodom/2021-website#readme",
+  "dependencies": {
+    "npm-watch": "^0.11.0"
+  }
+}

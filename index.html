@@ -10,9 +10,44 @@
 </head>
 <body>
 
+<input type="radio" class="radio__theme radio__theme--default" id="radio__theme--default" name="radio__theme" value="newspaper" checked>
+<input type="radio" class="radio__theme radio__theme--newspaper" id="radio__theme--newspaper" name="radio__theme" value="newspaper">
+<input type="radio" class="radio__theme radio__theme--evening" id="radio__theme--evening" name="radio__theme" value="evening">
+<input type="radio" class="radio__theme radio__theme--midnight" id="radio__theme--midnight" name="radio__theme" value="midnight">
+
 <header id="header">
     <div class="container">
-        Container lol
+        <ul id="header__list">
+            <li>
+                EJOSEPHODOM
+            </li>
+            
+            <li>
+                themes:
+            </li>
+            
+            <li>
+                <ul id="header__themes">
+                    <li>
+                        <label for="radio__theme--newspaper">
+                            Newspaper
+                        </label>
+                    </li>
+                    
+                    <li>
+                        <label for="radio__theme--evening">
+                            Evening
+                        </label>
+                    </li>
+                    
+                    <li>
+                        <label for="radio__theme--midnight">
+                            Midnight
+                        </label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div><!-- .container -->
 </header><!-- #header -->
 
@@ -27,11 +62,11 @@
     </section><!-- #section-hero -->
     
     <section id="section-experience">
-        <sidebar>
+        <aside>
             <div class="container">
                 <h2>Skills</h2>
             </div><!-- .container -->
-        </sidebar>
+        </aside>
         
         <section>
             <div class="container">

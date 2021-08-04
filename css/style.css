@@ -59,6 +59,45 @@ h1 small {
     width: calc(100% - 1rem);
 }
 
+/* Header */
+
+#header {
+    padding: 1rem 0;
+}
+
+#header #header__list,
+#header #header__themes
+{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#header #header__list {
+    align-items: center;
+    display: flex;
+}
+
+#header #header__list *:first-child {
+    flex-grow: 1;
+}
+
+#header #header__themes {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+}
+
+#header #header__list li,
+#header #header__themes li
+{
+    padding: 0 0.5rem 0 0;
+}
+
+#header #header__themes li label {
+    cursor: pointer;
+}
+
 /* Sections */
 
 #section-hero {
@@ -71,7 +110,31 @@ h1 small {
     display: flex;
 }
 
-#section-experience sidebar {
+#section-experience aside {
     border-right: 8px solid #000;
     width: 25%;
+}
+
+/* Themes */
+
+.radio__theme {
+    position: fixed;
+    right: -5000%;
+}
+
+.radio__theme[value="newspaper"]:checked ~ #header label[for="radio__theme--newspaper"],
+.radio__theme[value="evening"]:checked ~ #header label[for="radio__theme--evening"],
+.radio__theme[value="midnight"]:checked ~ #header label[for="radio__theme--midnight"]
+{
+    text-decoration: underline;
+}
+
+.radio__theme[value="evening"]:checked ~ #main {
+    background-color: #091122;
+    color: #EEEED9;
+}
+
+.radio__theme[value="midnight"]:checked ~ #main {
+    background-color: #090909;
+    color: #D9D9D9;
 }

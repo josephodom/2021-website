@@ -2,11 +2,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Gowun+Dodum&display=swap');
 
+/* Resets */
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+dl dd {
+    margin: 0 0 1rem 0;
+}
+
 /* Typography */
 
 :root {
     font-family: 'Gowun Dodum', sans-serif;
     font-size: 20px;
+}
+
+dl dt {
+    font-weight: bold;
 }
 
 h1,
@@ -21,7 +41,15 @@ h1 {
     font-size: 3rem;
 }
 
-/* Layout */
+h2 {
+    font-size: 2rem;
+}
+
+dt {
+    font-size: 1.1rem;
+}
+
+/* Template */
 
 html {
     height: 100%;
@@ -40,24 +68,56 @@ body {
     color: #FFF;
 }
 
+#main {
+    flex-grow: 1;
+}
+
 #footer {
     align-items: center;
     background-color: #000;
     color: #FFF;
     display: flex;
-    flex-grow: 1;
     padding: 2rem 0;
+}
+
+a:link,
+a:hover,
+a:focus,
+a:active
+{
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.5s ease;
 }
 
 h1 small {
     display: block;
 }
 
-/* Responsiveness */
+h2 {
+    margin-bottom: 2rem;
+}
 
-.container {
+hr {
+    border: 1px solid #000;
     margin: auto;
-    width: calc(100% - 1rem);
+    width: 50%;
+}
+
+.section-separator {
+    padding: 1rem 0;
+}
+
+.list-inline {
+    padding-top: 1rem;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline li:not(:last-child)::after {
+    content:" \2022";
 }
 
 /* Header */
@@ -106,31 +166,18 @@ h1 small {
 /* Sections */
 
 #section-hero {
-    border-bottom: 8px solid #000;
     padding: 2rem 0;
     text-align: center;
 }
 
-#section-experience {
-    display: flex;
-}
-
-#section-experience aside {
-    border-right: 8px solid #000;
-    flex-shrink: 0;
-    padding-right: 4rem;
-}
-
-#section-experience aside .container {
-    position: sticky;
-    top: 80px;
-}
-
-#section-experience section {
-    flex-grow: 1;
-}
-
 /* Themes */
+
+#main {
+    transition:
+        color 0.5s ease,
+        background-color 0.5s ease
+    ;
+}
 
 .radio__theme {
     position: fixed;
@@ -144,12 +191,65 @@ h1 small {
     text-decoration: underline;
 }
 
+.radio__theme[value="newspaper"]:checked ~ #main {
+    background-color: #E9E9E9;
+    color: #000;
+}
+
+.radio__theme[value="newspaper"]:checked ~ * a {
+    color: #33C;
+}
+
 .radio__theme[value="evening"]:checked ~ #main {
-    background-color: #091122;
-    color: #EEEED9;
+    background-color: #112233;
+    color: #EEEEC9;
+}
+
+.radio__theme[value="evening"]:checked ~ * a {
+    color: #CC3;
 }
 
 .radio__theme[value="midnight"]:checked ~ #main {
-    background-color: #090909;
+    background-color: #090911;
     color: #D9D9D9;
+}
+
+.radio__theme[value="midnight"]:checked ~ * a {
+    color: #C33;
+}
+
+/* Responsiveness */
+
+.container {
+    margin: auto;
+    width: calc(100% - 1rem);
+}
+
+@media (max-width: 599.98px) {
+    #header #header__list {
+        flex-wrap: wrap;
+    }
+    
+    #header #header__list *:first-child {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    #section-experience {
+        display: flex;
+    }
+    
+    #section-experience > * {
+        width: 50%;
+    }
+    
+    #section-experience > * h2 {
+        text-align: center;
+    }
+    
+    #section-experience > * dl {
+        margin: 0 auto 2rem auto;
+        width: 75%;
+    }
 }

@@ -292,6 +292,10 @@ small {
         display: none;
     }
     
+    #main {
+        background-color: none;
+    }
+    
     #section-hero {
         padding: 1rem 0;
     }

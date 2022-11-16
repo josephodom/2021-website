@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/josephodom/2021-website#readme",
   "dependencies": {
+    "minify": "^9.1.0",
     "npm-watch": "^0.11.0"
   }
 }

@@ -22,7 +22,7 @@ dl dd {
 
 :root {
     font-family: 'Gowun Dodum', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 dl dt {
@@ -90,10 +90,6 @@ a:active
     transition: color 0.5s ease;
 }
 
-h1 small {
-    display: block;
-}
-
 h2 {
     margin-bottom: 2rem;
 }
@@ -102,6 +98,10 @@ hr {
     border: 1px solid #000;
     margin: auto;
     width: 50%;
+}
+
+small {
+    display: block;
 }
 
 .section-separator {
@@ -153,7 +153,7 @@ hr {
 }
 
 #header #header__themes {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
 }
 
@@ -242,6 +242,7 @@ hr {
 
 .container {
     margin: auto;
+    max-width: 1100px;
     width: calc(100% - 1rem);
 }
 
@@ -305,5 +306,10 @@ hr {
     
     #profile-links li:nth-last-child(2)::after {
         content: "";
+    }
+    
+    .container {
+        max-width: unset;
+        width: unset;
     }
 }

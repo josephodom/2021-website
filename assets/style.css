@@ -91,25 +91,15 @@ a:active
 }
 
 h2 {
-    margin-bottom: 2rem;
-}
-
-hr {
-    border: 1px solid #000;
-    margin: auto;
-    width: 50%;
+    margin-bottom: 1rem;
 }
 
 small {
     display: block;
 }
 
-.section-separator {
-    padding: 1rem 0;
-}
-
 .list-inline {
-    padding-top: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .list-inline li {
@@ -259,19 +249,27 @@ small {
 @media (min-width: 600px) {
     #section-experience {
         display: flex;
+        justify-content: center;
     }
     
-    #section-experience > * {
+    #section-experience > aside {
+        width: 30%;
+    }
+
+    #section-experience > section {
         width: 50%;
     }
     
     #section-experience > * h2 {
-        text-align: center;
+        /* text-align: center; */
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
     }
     
     #section-experience > * dl {
         margin: 0 auto 1.5rem auto;
-        width: 75%;
+        width: 90%;
     }
 }
 
@@ -279,7 +277,7 @@ small {
 
 @media print {
     :root {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     * {
@@ -297,9 +295,9 @@ small {
     }
     
     #section-hero {
-        padding: 1rem 0;
+        padding: 0.75rem 0;
     }
-    
+
     #profile-links li:first-child {
         display: initial;
     }

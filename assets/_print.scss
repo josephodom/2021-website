@@ -1,0 +1,40 @@
+@media print {
+    :root {
+        font-size: 13px;
+    }
+    
+    * {
+        color: #000 !important;
+    }
+    
+    #header,
+    #footer
+    {
+        display: none;
+    }
+    
+    #main {
+        background-color: none;
+    }
+    
+    #section-hero {
+        padding: 1rem 0;
+    }
+    
+    #profile-links li:first-child {
+        display: initial;
+    }
+    
+    #profile-links li:last-child {
+        display: none;
+    }
+    
+    #profile-links li:nth-last-child(2)::after {
+        content: "";
+    }
+    
+    .container {
+        max-width: unset;
+        width: unset;
+    }
+}

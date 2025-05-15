@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+
+#header {
+    background-color: #000;
+    color: #FFF;
+}
+
+#main {
+    flex-grow: 1;
+}
+
+#footer {
+    align-items: center;
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    padding: 2rem 0;
+}
+
+a:link,
+a:hover,
+a:focus,
+a:active
+{
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: 1px solid #000;
+    margin: auto;
+    width: 50%;
+}
+
+small {
+    display: block;
+}
+
+.section-separator {
+    padding: 1rem 0;
+}
+
+.list-inline {
+    padding-top: 1rem;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+
+.list-inline li:not(:last-child)::after {
+    content:" \2022";
+}

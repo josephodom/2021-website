@@ -1,0 +1,57 @@
+#main {
+    transition:
+        color 0.5s ease,
+        background-color 0.5s ease
+    ;
+}
+
+.radio__theme {
+    position: fixed;
+    right: -5000%;
+}
+
+.radio__theme[value="newspaper"]:checked ~ #header label[for="radio__theme--newspaper"],
+.radio__theme[value="evening"]:checked ~ #header label[for="radio__theme--evening"],
+.radio__theme[value="midnight"]:checked ~ #header label[for="radio__theme--midnight"]
+{
+    text-decoration: underline;
+}
+
+.radio__theme[value="newspaper"]:checked ~ #main {
+    background-color: #E9E9E9;
+    color: #000;
+}
+
+.radio__theme[value="newspaper"]:checked ~ * a {
+    color: #33C;
+}
+
+.radio__theme[value="newspaper"]:checked ~ * hr {
+    border-color: #000;
+}
+
+.radio__theme[value="evening"]:checked ~ #main {
+    background-color: #112233;
+    color: #EEEEC9;
+}
+
+.radio__theme[value="evening"]:checked ~ * a {
+    color: #CC3;
+}
+
+.radio__theme[value="evening"]:checked ~ * hr {
+    border-color: #EEEEC9;
+}
+
+.radio__theme[value="midnight"]:checked ~ #main {
+    background-color: #090911;
+    color: #D9D9D9;
+}
+
+.radio__theme[value="midnight"]:checked ~ * hr {
+    border-color: #D9D9D9;
+}
+
+.radio__theme[value="midnight"]:checked ~ * a {
+    color: #C33;
+}

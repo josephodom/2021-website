@@ -1,0 +1,70 @@
+---
+layout: compressed
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./assets/style.css">
+<title>Joseph Odom &bull; Software Developer</title>
+</head>
+<body>
+
+<input type="radio" class="radio__theme radio__theme--default" id="radio__theme--default" name="radio__theme" value="newspaper" checked>
+<input type="radio" class="radio__theme radio__theme--newspaper" id="radio__theme--newspaper" name="radio__theme" value="newspaper">
+<input type="radio" class="radio__theme radio__theme--evening" id="radio__theme--evening" name="radio__theme" value="evening">
+<input type="radio" class="radio__theme radio__theme--midnight" id="radio__theme--midnight" name="radio__theme" value="midnight">
+
+<header id="header">
+    <div class="container">
+        <ul id="header__list">
+            <li>EJOSEPHODOM</li>
+
+            <li>themes:</li>
+
+            <li>
+                <ul id="header__themes">
+                    <li>
+                        <label for="radio__theme--newspaper">
+                            Newspaper
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="radio__theme--evening">
+                            Evening
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="radio__theme--midnight">
+                            Midnight
+                        </label>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="./resume-2023.pdf" target="_blank">
+                    PDF
+                </a>
+            </li>
+        </ul>
+    </div><!-- .container -->
+</header><!-- #header -->
+
+<main id="main">
+{{ content }}
+</main><!-- #main -->
+
+<footer id="footer">
+    <div class="container">
+        &copy; 2025 Joseph Odom
+    </div><!-- .container -->
+</footer><!-- #footer -->
+
+<script type="text/javascript">/* Chrome CSS animation bufgfix */</script>
+
+</body>
+</html>

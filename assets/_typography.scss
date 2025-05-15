@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&family=Gowun+Dodum&display=swap');
+
+:root {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 16px;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+h1,
+h2
+{
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+dt {
+    font-size: 1.1rem;
+}
